@@ -542,7 +542,19 @@ namespace alien_parte_finale
                 }
 
             }
-            Console.WriteLine("Mentre la Terra appariva all'orizzonte, vide l'infezione aliena pulsare nelle sue vene e capì di essere diventato l'arma che avrebbe distrutto l'umanità. Con le lacrime agli occhi, deviò la rotta verso il Sole, scegliendo di bruciare nel silenzio eterno pur di proteggere la vita di chi lo aspettava a casa.");
+            if (scappato == true)
+            {
+                Console.WriteLine("Complimenti! Sei riuscito a fuggire dallo xenomorfo e a tornare alla USCSS Covenant. La tua astuzia e il tuo coraggio hanno salvato l'equipaggio e forse l'umanità stessa.");
+            }
+            else if (morto == true)
+            {
+                Console.WriteLine("Purtroppo sei stato sopraffatto dallo xenomorfo. La tua missione finisce qui, ma il tuo sacrificio non sarà dimenticato.");
+                Console.WriteLine("Mentre la Terra appariva all'orizzonte, vide l'infezione aliena pulsare nelle sue vene e capì di essere diventato l'arma che avrebbe distrutto l'umanità. Con le lacrime agli occhi, deviò la rotta verso il Sole, scegliendo di bruciare nel silenzio eterno pur di proteggere la vita di chi lo aspettava a casa.");
+            }
+            else if (alienomorto == true)
+            {
+                Console.WriteLine("Hai sconfitto lo xenomorfo e salvato l'equipaggio della USCSS Covenant! La tua astuzia e il tuo coraggio hanno fatto la differenza in questa missione pericolosa.");
+            }
             Console.WriteLine("Grazie per aver giocato ad Alien comenant la minaccia!");
         }
     }
