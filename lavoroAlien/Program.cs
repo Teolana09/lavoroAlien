@@ -118,13 +118,17 @@ namespace alien_parte_finale
 
         static int AttaccoGiocatore(int vitaAlieno)
         {
+
             Random rnd = new Random();
             int danno = rnd.Next(5, 16); // 5–15 danni
 
             vitaAlieno -= danno;
 
             if (vitaAlieno < 0)
+            {
                 vitaAlieno = 0;
+            }
+                
 
             Console.WriteLine("Attacchi l'alieno e infliggi" + danno + "danni.");
             Console.WriteLine("Vita alieno:" + vitaAlieno);
@@ -219,6 +223,7 @@ namespace alien_parte_finale
                         if (cattura > 5)
                         {
                             Console.WriteLine("hai catturato lo xenomorfo con successo!");
+                            Console.WriteLine("complimenti sei riuscito a diminuire la sua velocità");
                             sceltaConSuccesso = true;
                         }
                         else
