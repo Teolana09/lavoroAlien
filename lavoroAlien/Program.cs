@@ -5,6 +5,7 @@ namespace alien_parte_finale
     {
         static string DialogoComando()
         {
+            //gestione del dialogo nella sala di comando
             Console.WriteLine("Sei nella sala di comando.\n");
 
             Console.WriteLine("Mira Solenz: \"La situazione è instabile. Dobbiamo decidere ora.\"");
@@ -94,6 +95,7 @@ namespace alien_parte_finale
 
         static (int nuovaVita, int medikitRimasti) UsaOggettoCura(int vitaGiocatore, int medikit)
         {
+            //gestione dell'uso del medikit per curare il giocatore
             if (medikit <= 0)
             {
                 Console.WriteLine("Non hai medikit!");
@@ -118,6 +120,7 @@ namespace alien_parte_finale
 
         static int AttaccoGiocatore(int vitaAlieno)
         {
+            //gestione dell'attacco del giocatore
 
             Random rnd = new Random();
             int danno = rnd.Next(5, 16); // 5–15 danni
@@ -138,6 +141,7 @@ namespace alien_parte_finale
 
         static int boost(int avanza, int passi, bool scassaP)
         {
+            //gestione del boost dei passi
             Random random = new Random();
             int bonus = random.Next(1, 7);
             bool bost = false;
@@ -163,7 +167,7 @@ namespace alien_parte_finale
         }
         static string Imprevisti(string imprevisti)
         {
-
+            //gestione degli imprevisti durante il gioco
             Random random = new Random();
             int evento = random.Next(1, 4);
             if (evento == 1)
@@ -186,6 +190,8 @@ namespace alien_parte_finale
         }
         static string turnoDIG(string turnoDIG, bool cacciatore, bool curatore, bool scassaP, bool armaletale, bool porteAPP, int proiettoli)
         {
+            //gestione del turno di gioco
+            //scelte del giocatore
             bool trovatoOggetto = false, sceltaConSuccesso = false;
             Random random = new Random();
             int OggaC = random.Next(1, 50);
@@ -318,6 +324,7 @@ namespace alien_parte_finale
 
         static void AttaccoAlieno(ref int vita)
         {
+            //gestione dell'attacco alieno
             Random rnd = new Random();
             int danno = rnd.Next(1, 11); // da 1 a 10
 
@@ -339,6 +346,7 @@ namespace alien_parte_finale
 
         static string equipaggiamento(int quantità, string equipaggiamento, string sceltapersonaggio)
         {
+            //gestione dell'equipaggiamento in base al personaggio scelto
             bool trappola = false, setAtt = false, taserAlt = false, scudoB = false, laptop = false;
             bool chiave = false, medikit = false, medikitAvv = false, scannerbiologico = false, dispoHAK = false;
             int proiettoli;
@@ -379,6 +387,7 @@ namespace alien_parte_finale
         }
         static string[] SCpercorso(bool scappato)
         {
+            //gestione del percorso nelle stanze
             int avanza = boost(0, 0, false);
 
             int passi = lancioDado();
@@ -412,7 +421,7 @@ namespace alien_parte_finale
             int sceltapersonaggio = 0, equipaggio = 3;
             bool scassaP = false, armaletale = false, curatore = false, cacciatore = false, porteAPP = false;
             bool morto = false, scappato = false, alienomorto = false;
-
+            //introduzione al gioco
 
             Console.WriteLine("La USCSS Covenant intercetta un misterioso segnale proveniente da un pianeta nascosto in una nebulosa. Oram, insieme a Daniels, Tennessee e Walter, scende a indagare.In una struttura aliena trovano delle uova. Oram ne osserva una da vicino… e un Facehugger gli balza sul volto.L’equipaggio corre alla nave e decolla in fretta, ma nella fuga la Covenant impatta contro una cintura di asteroidi. Le luci tremano, gli allarmi urlano.Nella sala medica, il corpo di Oram comincia a contorcersi. Qualcosa sta per nascere.");
             Console.WriteLine("------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
@@ -467,7 +476,7 @@ namespace alien_parte_finale
 
             {
                 string esitoMissione = DialogoComando();
-
+                //mostra l'esito della missione
                 Console.WriteLine("\nESITO FINALE:");
                 Console.WriteLine(esitoMissione);
 
@@ -479,8 +488,7 @@ namespace alien_parte_finale
                 Console.WriteLine(equipaggiamentoattuale);
 
                 string[] stanzaAttuale = SCpercorso(scappato);
-
-                int avanza = boost(0, 0, scassaP);
+                
                 Console.WriteLine("tu ora ti trovi in:" + stanzaAttuale[0]);
                 int lanciodado;
                 lanciodado = lancioDado();
@@ -504,9 +512,9 @@ namespace alien_parte_finale
                 scelta = turnoDIG("", cacciatore, curatore, scassaP, armaletale, porteAPP, 0);
                 Console.WriteLine("hai scelto di: " + scelta);
 
-                int vitaAlieno = 40;               
+                int vitaAlieno = 40;
 
-
+                //richiama il combattimento
                 Console.WriteLine("\nCOMBATTIMENTO CONTRO L'ALIENO:");
                 vitaAlieno = AttaccoGiocatore(vitaAlieno);
                 int vita = vitaGiocatore;
