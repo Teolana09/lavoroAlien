@@ -504,8 +504,7 @@ namespace alien_parte_finale
                 scelta = turnoDIG("", cacciatore, curatore, scassaP, armaletale, porteAPP, 0);
                 Console.WriteLine("hai scelto di: " + scelta);
 
-                int vitaAlieno = 40;
-                int vitaGio = 60;
+                int vitaAlieno = 40;               
 
 
                 Console.WriteLine("\nCOMBATTIMENTO CONTRO L'ALIENO:");
