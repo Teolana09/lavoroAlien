@@ -205,7 +205,7 @@ namespace alien_parte_finale
             Console.WriteLine("2) curare un membro dell'equipaggio");
 
 
-            Console.WriteLine("3) provare a chiamare aiuto");
+            Console.WriteLine("3) provare a sbloccare le porte");
 
             Console.WriteLine("4) controllare per oggetti utili");
 
