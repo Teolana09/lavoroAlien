@@ -415,91 +415,92 @@ namespace alien_parte_finale
         {
             // Con un array, il controllo andrebbe fatto sull'indice (ad esempio: if (indice == 0) {...})
             // Ma è più robusto e leggibile usare il nome della stanza come chiave di ricerca, come in questo esempio.
-
+            string descrizione = "";
             if (nomeStanza == "Ponte di Comando Holo-Visivo")
             {
-                return "Un'area operativa con schermi olografici che proiettano in 3D i dati tattici e la vista esterna.";
+               descrizione = "Un'area operativa con schermi olografici che proiettano in 3D i dati tattici e la vista esterna.";
             }
             else if (nomeStanza == "Camera di Navigazione Quantistica")
             {
-                return "Contiene il computer di bordo che calcola istantaneamente le rotte attraverso lo spazio-tempo.";
+                descrizione = "Contiene il computer di bordo che calcola istantaneamente le rotte attraverso lo spazio-tempo.";
             }
             else if (nomeStanza == "Sala Motori a Fusione Oscura")
             {
-                return "Il cuore pulsante della nave, dove una reazione controllata genera energia propulsiva illimitata.";
+                descrizione = "Il cuore pulsante della nave, dove una reazione controllata genera energia propulsiva illimitata.";
             }
             else if (nomeStanza == "Laboratorio Xenobiologico")
             {
-                return "Attrezzato per l'analisi e lo studio di forme di vita e campioni organici alieni.";
+                descrizione = "Attrezzato per l'analisi e lo studio di forme di vita e campioni organici alieni.";
             }
             else if (nomeStanza == "Modulo di Criostasi Profonda")
             {
-                return "Contiene capsule per il sonno criogenico a lungo termine durante i viaggi interstellari.";
+                descrizione = "Contiene capsule per il sonno criogenico a lungo termine durante i viaggi interstellari.";
             }
             else if (nomeStanza == "Orto Idroponico Bioluminescente")
             {
-                return "Un sistema ecologico autonomo per la coltivazione di cibo fresco sotto luci organiche.";
+                descrizione = "Un sistema ecologico autonomo per la coltivazione di cibo fresco sotto luci organiche.";
             }
             else if (nomeStanza == "Sala Olistica di Rilassamento Neurale")
             {
-                return "Un ambiente di terapia sensoriale che riequilibra le onde cerebrali e lo stress dell'equipaggio.";
+                descrizione = "Un ambiente di terapia sensoriale che riequilibra le onde cerebrali e lo stress dell'equipaggio.";
             }
             else if (nomeStanza == "Armeria a Campo Magnetico")
             {
-                return "Custodisce armi e attrezzature in sicurezza grazie a potenti campi di forza.";
+                descrizione = "Custodisce armi e attrezzature in sicurezza grazie a potenti campi di forza.";
             }
             else if (nomeStanza == "Centro di Comando Droni")
             {
-                return "Da qui si gestisce e si lancia una flotta di droni autonomi per ricognizione e manutenzione.";
+                descrizione = "Da qui si gestisce e si lancia una flotta di droni autonomi per ricognizione e manutenzione.";
             }
             else if (nomeStanza == "Archivio di Memoria Cristallina")
             {
-                return "Un caveau sicuro per il backup dei dati cruciali della missione su supporti cristallini indistruttibili.";
+                descrizione = "Un caveau sicuro per il backup dei dati cruciali della missione su supporti cristallini indistruttibili.";
             }
             else if (nomeStanza == "Sala di Teletrasporto Molecolare")
             {
-                return "Permette il trasferimento istantaneo di persone e oggetti su brevi o lunghe distanze.";
+                descrizione = "Permette il trasferimento istantaneo di persone e oggetti su brevi o lunghe distanze.";
             }
             else if (nomeStanza == "Blocco Medico Rigenerativo")
             {
-                return "Un'infermeria dotata di macchinari avanzati per la guarigione rapida e la rigenerazione tissutale.";
+                descrizione = "Un'infermeria dotata di macchinari avanzati per la guarigione rapida e la rigenerazione tissutale.";
             }
             else if (nomeStanza == "Corridoio di Gravità Variabile")
             {
-                return "Un passaggio che può simulare diverse condizioni gravitazionali per l'allenamento o la necessità della missione.";
+                descrizione = "Un passaggio che può simulare diverse condizioni gravitazionali per l'allenamento o la necessità della missione.";
             }
             else if (nomeStanza == "Simulatore Ambientale Totale")
             {
-                return "Una stanza versatile per l'addestramento che replica qualsiasi clima e scenario planetario.";
+                    descrizione = "Una stanza versatile per l'addestramento che replica qualsiasi clima e scenario planetario.";
             }
             else if (nomeStanza == "Cupola Stellare Panoramica")
             {
-                return "Offre una vista a 360 gradi dello spazio, ideale per l'osservazione e il relax.";
+                descrizione = "Offre una vista a 360 gradi dello spazio, ideale per l'osservazione e il relax.";
             }
             else if (nomeStanza == "Sala dei Reattori Antimateria")
             {
-                return "Dove si produce l'energia primaria della nave attraverso reazioni di annichilazione controllata.";
+                descrizione = "Dove si produce l'energia primaria della nave attraverso reazioni di annichilazione controllata.";
             }
             else if (nomeStanza == "Centro di Comunicazione Tachionica")
             {
-                return "Utilizzato per inviare e ricevere messaggi istantanei su distanze cosmiche.";
+                descrizione = "Utilizzato per inviare e ricevere messaggi istantanei su distanze cosmiche.";
             }
             else if (nomeStanza == "Quartieri dell’Equipaggio Modulari")
             {
-                return "Alloggi flessibili che possono essere riconfigurati in base alle esigenze e al numero dell'equipaggio.";
+                descrizione = "Alloggi flessibili che possono essere riconfigurati in base alle esigenze e al numero dell'equipaggio.";
             }
             else if (nomeStanza == "Santuario del Silenzio Cosmico")
             {
-                return "Una stanza di meditazione e isolamento acustico per la pace interiore.";
+                descrizione = "Una stanza di meditazione e isolamento acustico per la pace interiore.";
             }
             else if (nomeStanza == "Hangar Multifase")
             {
-                return "Un vasto spazio per l'attracco e la manutenzione di navette, caccia e veicoli ausiliari.";
+                descrizione = "Un vasto spazio per l'attracco e la manutenzione di navette, caccia e veicoli ausiliari.";
             }
             else
             {
-                return "Descrizione non disponibile per questa stanza.";
+                descrizione = "Descrizione non disponibile per questa stanza.";
             }
+            return descrizione;
         }
 
 
@@ -531,7 +532,6 @@ namespace alien_parte_finale
             Console.WriteLine("------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
             Console.WriteLine("5. Analista Taryn Wells\r\nRuolo: Esperta in comunicazioni e sistemi informatici\r\n\r\n\r\nAbilità: Hackeraggio porte, attivazione manuale navicelle");
             Console.WriteLine("------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
-            Console.WriteLine("      ___--=--------___\r\n        /. \\___\\____   _, \\_      /-\\\r\n       /. .  _______     __/=====@\r\n       \\----/  |  / \\______/      \\-/\r\n   _/         _/ o \\\r\n  / |    o   /  ___ \\\r\n / /    o\\\\ |  / O \\ /|      __-_\r\n|o|     o\\\\\\   |  \\ \\ /__--o/o___-_\r\n| |      \\\\\\-_  \\____  ----  o___-\r\n|o|       \\_ \\     /\\______-o\\_-\r\n| \\       _\\ \\  _/ / |\r\n\\o \\_   _/      __/ /\r\n \\   \\-/   _       /|_\r\n  \\_      / |   - \\  |\\\r\n    \\____/  \\ | /  \\   |\\\r\n            | o |   | \\ |\r\n            | | |    \\ | \\\r\n           / | /      \\ \\ \\\r\n         /|  \\o|\\--\\  /  o |\\--\\\r\n         \\----------' \\---------'");
             Console.WriteLine("Ombre dense avvolgono pareti di metallo organico che sembrano respirare, illuminate solo dal fioco pulsare di venature bioluminescenti.\r Un ronzio sordo vibra nell'aria gelida, suggerendo una tecnologia incomprensibile in agguato nel buio.");
             sceltapersonaggio = Convert.ToInt32(Console.ReadLine());
             if (sceltapersonaggio == 1)
